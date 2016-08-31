@@ -1,0 +1,34 @@
+<include file="Common:head" />
+  <link rel="stylesheet" href="__PUBLIC__/css/Contact/style.css" media="screen" title="no title" charset="utf-8">
+  <body>
+
+    <div class="container">
+    	<div class="row footer">
+    		<div class="col-md-8 contact_left">
+    			<p>你可以通过填写以下信息来给我发送消息： </p>
+    			<form method="post" action="{:U('Contact/support')}">
+    				<input type="text" value="姓名" name="clientname" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '姓名';}">
+    				<input type="text" value="电子邮件" name="clientemail" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '电子邮件';}">
+    				<input type="text" value="主题" name="clientsubject" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '主题';}">
+    				<textarea onFocus="this.value='';" name="clientcontent" onBlur="if (this.value == '') {this.value='这里写你的信息。。。';}" >这里写你的信息。。。</textarea>
+    				<span class="pull-right"><input type="submit" value="发送"></span>
+    			</form>
+    		</div>
+    		<div class="col-md-4  contact_right">
+          <p>或者你也可以通过以下我的联系方式联系我： </p>
+          <p class="conway"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>: 18829237692</p>
+    			<p class="conway"><img src="__PUBLIC__/images/wechat.png" alt="" width="14px" height="14px"/>: xtayfjtn</p>
+          <p class="conway"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>: <a href="mailto:npu_zhangqian@163.com">npu_zhangqian@163.com</a>
+          <p class="conway"><img src="__PUBLIC__/images/qq.png" alt="" width="14px" height="14px"/>: 810194314</p>
+          <p>欢迎用各种方式联系我，打扰我，我会很乐意于回复您。</p>
+    		</div>
+    	</div>
+    </div>
+    <script type="text/javascript">
+    window.onload = function() {
+      $(".navig li a").removeClass("active");
+      $("#contact").addClass("active");
+    }
+    </script>
+    <include file="Common:foot" />
+  </body>

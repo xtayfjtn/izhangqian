@@ -1,0 +1,35 @@
+<include file="Common:head" />
+<link rel="stylesheet" href="__PUBLIC__/css/Tech/style.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+  <div class="time_container">
+    <div class="timeline animated">
+
+      <volist name="techarticles" id="article_bri">
+        <div class="timeline-row">
+          <!-- <div class="timeline-time"><small>Oct 30</small>4:53 PM</div> -->
+          <div class="timeline-time">{$article_bri.article_info}</div>
+          <div class="timeline-icon">
+            <div class="bg-primary"><i class="fa fa-pencil"></i></div>
+          </div>
+          <div class="panel timeline-content">
+            <div class="panel-body">
+              <h2><a href="{:U('Article/index')}?id={$article_bri.article_id}">{$article_bri.article_title}</a></h2>
+              <img src="__PUBLIC__/images/image.jpg" alt="" width="100px" height="100px" class="art_img"/>
+              <div class="art_bri"><p>{$article_bri.article_brief}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </volist>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="__PUBLIC__/js/Tech/script.js"></script>
+  <script type="text/javascript">
+  window.onload = function() {
+    $(".navig li a").removeClass("active");
+    $("#tech").addClass("active");
+  }
+  </script>
+</body>

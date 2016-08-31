@@ -1,0 +1,16 @@
+.art_title {
+  text-align: center;
+}
+
+.art_info {
+  text-align: center;
+}
+
+.copyright_p {
+  text-indent: 0;
+  border-left: solid 3px #e41c1e;
+  margin-left: 2em;
+  padding-left: 10px;
+  color: #666;
+  font-size: 14px;
+}

@@ -1,0 +1,51 @@
+  <include file="Common:head"/>
+  <link rel="stylesheet" href="__PUBLIC__/css/Index/style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+
+    <div class="info">
+      <figure> <img src="__PUBLIC__/images/homefig.jpg"  alt="Panama Hat" width="630px" height="250px">
+        <figcaption><strong>渡人如渡己，渡已，亦是渡</strong> 当我们被误解时，会花很多时间去辩白。 但没有用，没人愿意听，大家习惯按自己的所闻、理解做出判别，每个人其实都很固执。与其努力且痛苦的试图扭转别人的评判，不如默默承受，给大家多一点时间和空间去了解。而我们省下辩解的功夫，去实现自身更久远的人生价值。其实，渡人如渡己，渡已，亦是渡人。</figcaption>
+      </figure>
+      <div class="card">
+        <h1>我的名片</h1>
+        <p>姓名：张乾 | 半世风烟</p>
+        <p>学校：西北工业大学</p>
+        <p>电话：17321289116|18829237692</p>
+        <p>Email：npu_zhangqian@163.com</p>
+        <ul class="linkmore">
+          <li><a href="#" class="talk" title="给我留言"></a></li>
+          <li><a href="#" class="address" title="联系地址"></a></li>
+          <li><a href="#" class="email" title="给我写信"></a></li>
+          <li><a href="#" class="photos" title="生活照片"></a></li>
+          <li><a href="#" class="heart" title="关注我"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contentbody">
+      <div class="composition">
+
+        <volist name="articles" id="article_single" >
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title"><a href="{:U('Article/index')}?id={$article_single.article_id}">{$article_single.article_title}</a></h3>
+            </div>
+            <div class="panel-body">
+              <img src="__PUBLIC__/images/article.jpg" alt="文章图片" />
+              <div class="comp_info">
+                {$article_single.article_brief}<br />
+  							<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;{$article_single.article_info}
+              </div>
+            </div>
+          </div>
+        </volist>
+
+      </div>
+      <div class="addon">
+        <iframe src="http://music.163.com/outchain/player?type=0&amp;id=420051918&amp;auto=1&amp;height=430" width="100%" height="400" frameborder="no" marginwidth="0" marginheight="0"></iframe>
+      </div>
+    </div>
+    <include file="Common:foot" />
+  </body>
+</html>

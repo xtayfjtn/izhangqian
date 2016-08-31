@@ -1,0 +1,67 @@
+  <!-- about页面 -->
+  <include file="Common:head"/>
+  <link rel="stylesheet" href="__PUBLIC__/css/About/style.css" media="screen" title="no title" charset="utf-8">
+  <body>
+    <embed src="http://music.163.com/style/swf/widget.swf?sid=139774&type=2&auto=1&width=320&height=66" width="340" height="0"  allowNetworking="all"></embed>
+    <div id="mainDiv">
+    	<div id="content">
+    		<div id="code">
+    			<span class="comments">/**</span><br />
+    			<span class="space"/><span class="comments">*2016—07-10</span><br />
+          <span class="space"/><span class="comments">*author:Qian Zhang</span><br />
+    			<span class="space"/><span class="comments">*/</span><br />
+    			<span class="keyword">#include </span> &lt;iostream&gt; <br />
+    			<span class="keyword">#include </span> &lt;string&gt;<br />
+          <span class="keyword">#include </span> &lt;time.h&gt;<br />
+          <span class="keyword">#include </span> &lt;windows.h&gt;<br />
+          <span class="keyword">using namespace </span> std;<br />
+          <span class="keyword">class</span> ZQ <br />
+          {<br />
+          <span class="keyword">public: </span> <br />
+          	<span class="placeholder"/>ZQ(<span class="keyword">string</span> name); <br />
+          	<span class="placeholder"/><span class="keyword">string</span> getName(); <br />
+          	<span class="placeholder"/><span class="keyword">int</span> getYear(); <br />
+          	<span class="placeholder"/><span class="keyword">string</span> getSchool(); <br />
+          <span class="keyword">private:</span><br />
+          	<span class="placeholder"/><span class="keyword">string</span> name;<br />
+          	<span class="placeholder"/><span class="keyword">int</span> codeYear;<br />
+          	<span class="placeholder"/><span class="keyword">string</span> school = "NPU";<br />
+          };<br />
+          <span class="keyword">ZQ::ZQ</span>(<span class="keyword">string</span> name):name(name)<br />
+          {<br />
+          	<span class="placeholder"/><span class="keyword">time_t</span> timer;<br />
+          	<span class="placeholder"/>time(&timer);<br />
+          	<span class="placeholder"/>tm* t_tm = localtime(&timer);<br />
+          	<span class="placeholder"/>codeYear = t_tm->tm_year + 1900 - 2013;<br />
+          }<br />
+          <span class="keyword">string</span> ZQ::getName(){<span class="keyword">return</span> name;}<br />
+          <span class="keyword">int ZQ::</span>getYear(){<span class="keyword">return</span> codeYear;}<br />
+          <span class="keyword">string ZQ::</span>getSchool(){<span class="keyword">return</span> school;}<br />
+          <span class="keyword">int</span> main()<br />
+          {<br />
+          	<span class="placeholder"/><span class="keyword">ZQ</span> zq("Qian Zhang");<br />
+          	<span class="placeholder"/><span class="keyword">cout</span> << "programmer： " << zq.getName() << endl;<br />
+          	<span class="placeholder"/><span class="keyword">cout</span> << "coding yeah: " << zq.getYear() << endl;<br />
+          	<span class="placeholder"/><span class="keyword">cout</span> << "college school: " << zq.getSchool() << endl;<br />
+          	<span class="placeholder"/><span class="keyword">return</span> 0;<br />
+          }<br />
+          <span class="comments">//After all, I want to say:</span><br />
+    			<span class="comments">//If you have some ideas about this page, please contact me.</span><br />
+    		</div>
+    	</div>
+    </div>
+    <include file="Common:foot" />
+    <script type="text/javascript" src="__PUBLIC__/js/About/script.js"></script>
+    <script type="text/javascript">
+    //导航条切换active
+      window.onload = function() {
+        $(".navig li a").removeClass("active");
+        $("#about").addClass("active");
+      }
+
+      //打字效果显示。
+      $(function(){
+      	$("#code").typewriter();
+      })
+    </script>
+  </body>
