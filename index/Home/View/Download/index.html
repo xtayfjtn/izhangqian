@@ -1,7 +1,25 @@
   <include file="Common:head"/>
-
-  <a href="__PUBLIC__/libs/zhangqian_blog1.0.apk">WTF</a>
-
+  <link rel="stylesheet" href="__PUBLIC__/css/Download/style.css" />
+<body>
+  <div class="left">
+    <img src="" alt="" class="fuzhu">
+    <a href="__PUBLIC__/libs/zhangqian_blog_forflyme1.0.apk" id="middle"><button type="button" class="btn btn-primary" id="made">下载Flyme专版1.0</button></a>
+  </div>
+  <div class="qrcode">
+    <img src="__PUBLIC__/images/qrcode.png" alt="下载应用">
+    <br />
+    <span>请使用浏览器进行扫描</span>
+  </div>
+  <div class="right">
+    <img src="" alt="" class="fuzhu">
+    <a href="__PUBLIC__/libs/zhangqian_blog1.0.apk"><button type="button" class="btn btn-primary">下载MyBlog1.0</button></a>
+  </div>
+  <script type="text/javascript">
+  window.onload = function() {
+    $(".navig li a").removeClass("active");
+    $("#download").addClass("active");
+  }
+  </script>
   <include file="Common:foot" />
 </body>
 </html>

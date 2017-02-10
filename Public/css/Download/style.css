@@ -1,0 +1,19 @@
+.left, .right {
+  width: 33.33%;
+  text-align: center;
+  float: left;
+  height: 350px;
+  vertical-align: middle;
+}
+.qrcode {
+  width: 33.33%;
+  text-align: center;
+  float: left;
+  height: 350px;
+}
+
+.fuzhu {
+  width: 0;
+  height: 100%;
+  visibility: hidden;
+}
