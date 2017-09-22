@@ -28,11 +28,14 @@ class MusportsController extends Controller {
   }
 
   public function signup() {
-    $phone = $_GET['phone'];
-    $pwd=$_GET['pwd'];
+    // $phone = $_POST['phone'];
+    // $pwd=$_POST['pwd'];
+    $phone = I('phone');
+    $pwd = I('pwd');
     $user = M('musportusr');
     $data['phone'] = $phone;
     $data['pwd'] = $pwd;
+    $data['sex'] = 1;
     $res = $user->add($data);
     if ($res) {
       $arr["status"]=100;
@@ -48,8 +51,8 @@ class MusportsController extends Controller {
 
   public function updateUser() {
     $phone = $_POST('phone');
-    $param1 = $_POST('param1');
-    $data['param1'] = $param1;
+    $nickname = $_POST('nickname');
+    $data['nickname'] = $nickname;
     $cond = 'phone='.$phone;
     $User = M('musportusr');
     $res = $User->where($cond)->save($data);
@@ -58,7 +61,7 @@ class MusportsController extends Controller {
       $arr["message"]="Congratulations!";
     } else {
       $arr["status"]=303;
-      $arr["message"]="Sorry, You are not registerd";
+      $arr["message"]="Sorry, You are not update";
     }
 
     //输出json
